@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;600&family=Nunito:wght@200&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balls{
+    position: relative;
+    display: flex;
+}
+
+.balls span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #6bd4fd;
+    margin: 0 4px;
+    border-radius: 0%;
+    box-shadow: 0 0 0 10px #8aedff,
+    0 0 50px #27c2ff,
+    0 0 100px #29c2ff;
+    animation: animate 15s linear infinite ;
+    animation-duration: calc(125s / var(--i));
+}
+
+.balls span:nth-child(even){
+    
+    background: #071ff5;
+    box-shadow: 0 0 0 10px #afc4fd,
+    0 0 50px #274fff,
+    0 0 100px #395aec;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+
+}
